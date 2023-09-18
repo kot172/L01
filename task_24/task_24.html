@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Таблица данных</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      cursor: pointer;
+    }
+    .asc::after {
+      content: ' ▲';
+    }
+    .desc::after {
+      content: ' ▼';
+    }
+  </style>
+</head>
+<body>
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)" data-key="fname">Имя</th>
+        <th onclick="sortTable(1)" data-key="lname">Фамилия</th>
+        <th onclick="sortTable(2)" data-key="tel">Телефон</th>
+        <th onclick="sortTable(3)" data-key="address">Адрес</th>
+        <th onclick="sortTable(4)" data-key="city">Город</th>
+        <th onclick="sortTable(5)" data-key="state">Штат</th>
+        <th onclick="sortTable(6)" data-key="zip">Почтовый индекс</th>
+      </tr>
+    </thead>
+    <tbody id="data-body"></tbody>
+  </table>
+
+  <div id="pagination"></div>
+ <script src="task_24.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>VK Public Posts</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body class="body">
+  <div id="post-container" class="post__container"></div>
+  <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
+
+
+<!-- //   -30602036
+// 51743757 apiid
+b30871acb30871acb30871acf6b01dfda1bb308b30871acd7f0044ffd0695f368178a0f
+ -->
+
+ <!-- 
+  <script>
+    VK.init({
+      apiId: 51743757 // Замените YOUR_APP_ID на ваше реальное ID приложения
+    });
+
+    VK.Widgets.Auth("vk_auth", {
+      authUrl: '/auth/vk',
+      onAuth: function(data) {
+        VK.Api.call('wall.get', { owner_id: -30602036, count: 10 }, function(response) {
+          if (response.response) {
+            const posts = response.response.items;
+            const postsContainer = document.getElementById('posts');
+            for (let i = 0; i < posts.length; i++) {
+              const post = posts[i];
+              const postText = post.text;
+              const postDate = new Date(post.date * 1000).toLocaleString();
+              const postItem = document.createElement('div');
+              postItem.innerHTML = '<p>' + postText + '</p><small>' + postDate + '</small>';
+              postsContainer.appendChild(postItem);
+            }
+          }
+        });
+      }
+    });
+  </script>
+  -->
